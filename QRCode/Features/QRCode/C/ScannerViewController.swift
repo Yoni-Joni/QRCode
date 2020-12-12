@@ -19,9 +19,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var previewLayer: AVCaptureVideoPreviewLayer!
     weak var delegate:ScannerViewControllerDelegate?
 
-    deinit {
-        print("Killed ScannerVC")
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
