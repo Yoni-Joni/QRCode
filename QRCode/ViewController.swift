@@ -38,12 +38,12 @@ extension ViewController: ScannerViewControllerDelegate {
         do {
             let person = try JSONDecoder().decode(Person.self, from: personData)
             dismiss(animated: true) {
-                Alert.present(title: "There is a person", message: "\(person)", from: self)
+                Alert.present(title: "There is a person", message: "\(person)", actions: .ok(handler: nil), from: self)
             }
         } catch {
             let e = QRCodeError.decoding
             dismiss(animated: true) {
-                Alert.present(title: e.rawValue, message: e.errorMessage, from: self)
+                Alert.present(title: e.rawValue, message: e.errorMessage, actions: .ok(handler: nil), from: self)
             }
         }
     }
